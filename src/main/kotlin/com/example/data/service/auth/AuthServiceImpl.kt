@@ -28,7 +28,7 @@ class AuthServiceImpl : AuthService {
 
     override suspend fun loginUser(email: String, password: String): User? {
         val hashedPassword = hash(password)
-        val userRow = dbQuery { UserTable.select { UserTable.email eq email and (UserTable.password eq hashedPassword) }.firstOrNull() }
+        val userRow = dbQuery { UserTable.select { UserTable.email eq email and (UserTable.password eq hashedPassword) } }
         return userRow.toUser()
     }
 

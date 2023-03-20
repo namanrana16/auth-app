@@ -6,7 +6,7 @@ import com.example.routes.auth.authRoutes
 import com.example.routes.story.storyRoutes
 import com.example.routes.user.userRoutes
 import io.ktor.server.application.*
-
+import io.ktor.server.plugins.contentnegotiation.*
 
 fun configureDatabase() {
     DatabaseFactory.init()
@@ -14,7 +14,7 @@ fun configureDatabase() {
 
 fun Application.configureContentNegotiation() {
     install(ContentNegotiation) {
-        jackson()
+
     }
 }
 

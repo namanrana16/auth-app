@@ -4,6 +4,7 @@ import com.fasterxml.jackson.core.JsonParseException
 import com.fasterxml.jackson.databind.exc.MismatchedInputException
 import com.fasterxml.jackson.module.kotlin.MissingKotlinParameterException
 import io.ktor.server.application.*
+import io.ktor.server.plugins.statuspages.*
 
 fun Application.configureStatusPages() {
     install(StatusPages) {

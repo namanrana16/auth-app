@@ -25,8 +25,8 @@ dependencies {
     implementation("io.ktor:ktor-server-netty-jvm:$ktor_version")
     implementation("ch.qos.logback:logback-classic:1.4.5")
     implementation("io.ktor:ktor-jackson:1.6.8")
-    implementation("io.ktor:ktor-auth:1.6.8")
-    implementation("io.ktor:ktor-auth-jwt:1.6.8")
+    implementation("io.ktor:ktor-auth:$ktor_version")
+    implementation("io.ktor:ktor-auth-jwt:$ktor_version")
     implementation("commons-codec:commons-codec:1.15")
     implementation("org.jetbrains.exposed:exposed-core:0.40.1")
     implementation("org.jetbrains.exposed:exposed-dao:0.40.1")
@@ -34,7 +34,8 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-java-time:0.40.1")
     implementation("org.postgresql:postgresql:42.5.1")
     implementation("com.zaxxer:HikariCP:5.0.1")
-
+    implementation("io.ktor:ktor-server-status-pages:$ktor_version")
+    implementation("io.ktor:ktor-server-content-negotiation:$ktor_version")
     testImplementation("io.ktor:ktor-server-tests-jvm:$ktor_version")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
 }
